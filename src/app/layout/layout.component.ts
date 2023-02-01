@@ -14,11 +14,22 @@ export class LayoutComponent implements OnInit {
   ngOnInit() {
   }
 
-  public clickButton(): void {
+  public clickButtonOne(): void {
+    console.log('clickButtonOne()');
     this.buttonDisabled = true;
+    console.log('button 1 disabled');
     setTimeout(() => {
       this.buttonDisabled = false;
+      console.log('button 2 enabled');
     }, 3000);
+  }
+
+  public clickButtonTwo(): void {
+    console.log('clickButtonTwo()');
+  }
+
+  public log(): void {
+    console.log('log()');
   }
 
 }
