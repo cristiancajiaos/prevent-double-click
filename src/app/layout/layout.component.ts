@@ -15,6 +15,10 @@ export class LayoutComponent implements OnInit {
   ngOnInit() {
   }
 
+  public clickRegularButton(): void {
+    console.log('clickRegularButton()');
+  }
+
   public clickButtonOne(): void {
     console.log('clickButtonOne()');
     this.buttonDisabled = true;
