@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LayoutComponent implements OnInit {
 
+  public buttonDisabled: boolean = false;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  public clickButton(): void {
+    this.buttonDisabled = true;
+    setTimeout(() => {
+      this.buttonDisabled = false;
+    }, 3000);
   }
 
 }

@@ -1,1 +1,19 @@
-<p>layout works!</p>
+<div class="row">
+  <div class="col-12 col-lg-6">
+    <div class="d-grid">
+      <button class="btn btn-primary" (click)="clickButton()" [disabled]="buttonDisabled">
+        <span *ngIf="!buttonDisabled">Press me</span>
+        <span *ngIf="buttonDisabled">Wait 3 seconds...</span>
+      </button>
+    </div>
+  </div>
+  <div class="col-12 col-lg-6">
+    <div class="d-grid">
+      <button class="btn btn-primary">
+        Press me
+      </button>
+
+      <p>This button will feature a directive to prevent Double Click.</p>
+    </div>
+  </div>
+</div>
