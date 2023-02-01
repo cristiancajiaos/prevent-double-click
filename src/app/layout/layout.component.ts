@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class LayoutComponent implements OnInit {
 
   public buttonDisabled: boolean = false;
+  public buttonThreeDisabled: boolean = false;
 
   constructor() { }
 
@@ -20,7 +21,7 @@ export class LayoutComponent implements OnInit {
     console.log('button 1 disabled');
     setTimeout(() => {
       this.buttonDisabled = false;
-      console.log('button 2 enabled');
+      console.log('button 1 enabled');
     }, 3000);
   }
 
@@ -30,6 +31,16 @@ export class LayoutComponent implements OnInit {
 
   public log(): void {
     console.log('log()');
+  }
+
+  public clickButtonThree(): void {
+    console.log('clickButtonThree()');
+    this.buttonThreeDisabled = true;
+    console.log('button 3 disabled');
+    setTimeout(() => {
+      this.buttonThreeDisabled = false;
+      console.log('button 3 enabled');
+    }, 3000);
   }
 
 }

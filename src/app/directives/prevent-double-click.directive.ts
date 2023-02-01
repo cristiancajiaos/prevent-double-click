@@ -7,6 +7,8 @@ import { throttleTime } from 'rxjs/operators';
 })
 export class PreventDoubleClickDirective implements OnInit, OnDestroy {
 
+  /* Idea taken from: https://stackoverflow.com/questions/51390476/how-to-prevent-double-click-in-angular */
+
   @Input() throttleTime = 500;
 
   @Output() throttledClick = new EventEmitter();
